@@ -8,20 +8,20 @@ let server = require('./qr'),
 require('events').EventEmitter.defaultMaxListeners = 500;
 app.use('/server', server);
 app.use('/code', code);
-app.use('/pair',async (req, res, next) => {
+/*app.use('/pair',async (req, res, next) => {
 res.sendFile(__path + '/pair.html')
 })
 app.use('/qr',async (req, res, next) => {
 res.sendFile(__path + '/qr.html')
-})
+})*/
 app.use('/',async (req, res, next) => {
-res.sendFile(__path + '/main.html')
+res.sendFile(__path + '/pair.html')
 })
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(PORT, () => {
     console.log(`
-Don't Forgot To Give Star FATIMA-MD
+Don't Forget To Give Star KAMRAN-XD
 
  Server running on http://localhost:` + PORT)
 })
